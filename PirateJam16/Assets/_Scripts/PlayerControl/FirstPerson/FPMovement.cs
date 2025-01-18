@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class FPMovement : MonoBehaviour
 {
     public float movementSpeed = 20f;
     public float momentumDamping = 5f;
@@ -13,6 +13,8 @@ public class PlayerMove : MonoBehaviour
     private Vector3 inputVector;
     private Vector3 movementVector;
 
+    // Move this out to it's own script
+    public bool headBobEnabled = false;
     public Animator camAnimator;
     private bool isWalking = false;
 
@@ -23,6 +25,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
+        // Put this in some sort of player manager?
         GetComponent<Health>().Death += DisableMovement;
     }
 
@@ -57,6 +60,7 @@ public class PlayerMove : MonoBehaviour
 
     private bool IsMovementInputDown()
     {
+        // Todo use input action system
         if (Input.GetKey(KeyCode.W) ||
             Input.GetKey(KeyCode.A) ||
             Input.GetKey(KeyCode.S) ||
@@ -84,6 +88,8 @@ public class PlayerMove : MonoBehaviour
 
     private void SetAnimations()
     {
+        if (!headBobEnabled) return;
+
         camAnimator.SetBool("IsWalking", isWalking);
     }
 }

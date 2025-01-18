@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerMouseLook : MonoBehaviour
+public class FPCamera : MonoBehaviour
 {
     public float sensitivity = 1.5f;
     public float smoothing = 1.5f;
