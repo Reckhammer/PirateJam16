@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class SegmentedHealthBar : HealthBar
 {
     public List<HealthBarSegment> segments = new List<HealthBarSegment>();
     public HealthBarSegment segmentPrefab;
@@ -15,7 +15,7 @@ public class HealthBar : MonoBehaviour
         layoutGroup = GetComponent<LayoutGroup>();
     }
 
-    public void SetHealth(int amount)
+    public override void SetHealth(int amount)
     {
         SetAllSegments(false);
 
@@ -25,7 +25,7 @@ public class HealthBar : MonoBehaviour
         }
     }
 
-    public void SetMaxHealth(int amount)
+    public override void SetMaxHealth(int amount)
     {
         if (amount < segments.Count)
         {
