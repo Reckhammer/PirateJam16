@@ -10,7 +10,8 @@ public class AlignToPlayer : MonoBehaviour
 
     private void Awake()
     {
-        target = GameObject.FindAnyObjectByType<PlayerMove>().transform;
+        // Have some sort of manager with a reference to the player
+        target = /*GameObject.FindAnyObjectByType<PlayerMove>().transform*/null;
     }
 
     private void Start()

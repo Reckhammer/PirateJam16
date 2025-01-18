@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
             health = GetComponent<Health>();
 
         agent = GetComponent<NavMeshAgent>();
-        playerRef = GameObject.FindAnyObjectByType<PlayerMove>().transform;
+        playerRef = /*GameObject.FindAnyObjectByType<PlayerMove>().transform*/null; // Make a player manager to get ref to player
     }
 
     protected virtual void InitEventListeners()
