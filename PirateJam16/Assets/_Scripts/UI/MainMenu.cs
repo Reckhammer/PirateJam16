@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Deprecate or repurpose into changing UI only
 public class MainMenu : MonoBehaviour
 {
     public void OnStartButtonClicked()
