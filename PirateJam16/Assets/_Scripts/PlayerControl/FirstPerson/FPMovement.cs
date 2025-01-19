@@ -6,6 +6,7 @@ public class FPMovement : MonoBehaviour
 {
     public float walkingSpeed  = 20f;
     private float currentSpeed;
+    [Tooltip("The lower the value, the longer it takes for the momentum to lower")]
     public float momentumDamping = 5f;
     public float playerGravity = -10f;
     public bool canMove = true;
