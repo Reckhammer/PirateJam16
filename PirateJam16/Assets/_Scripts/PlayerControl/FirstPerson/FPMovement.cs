@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class FPMovement : MonoBehaviour
 {
-    public float movementSpeed = 20f;
+    public float walkingSpeed  = 20f;
+    private float currentSpeed;
     public float momentumDamping = 5f;
     public float playerGravity = -10f;
     public bool canMove = true;
+    private bool isWalking = false;
+
+    [Header("Sprinting")]
+    public bool canSprint = true;
+    public float sprintSpeed  = 30f;
+    private bool isSprinting = false;
 
     private CharacterController myController;
     private Vector3 inputVector;
@@ -16,7 +23,6 @@ public class FPMovement : MonoBehaviour
     // Move this out to it's own script
     public bool headBobEnabled = false;
     public Animator camAnimator;
-    private bool isWalking = false;
 
     private void Awake()
     {
@@ -40,6 +46,7 @@ public class FPMovement : MonoBehaviour
 
     private void GetInput()
     {
+        // Todo: use actual input system
         if (IsMovementInputDown())
         {
             inputVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")); // Get player inputs
@@ -55,7 +62,14 @@ public class FPMovement : MonoBehaviour
             isWalking = false;
         }
 
-        movementVector = (inputVector * movementSpeed) + (Vector3.up * playerGravity);
+        if (canSprint && Input.GetKey(KeyCode.LeftShift))
+            isSprinting = true;
+        else
+            isSprinting = false;
+
+        currentSpeed = isSprinting ? sprintSpeed : walkingSpeed;
+
+        movementVector = (inputVector * currentSpeed) + (Vector3.up * playerGravity);
     }
 
     private bool IsMovementInputDown()

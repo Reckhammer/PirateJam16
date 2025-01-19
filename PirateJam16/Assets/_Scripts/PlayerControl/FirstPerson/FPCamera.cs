@@ -2,14 +2,26 @@ using UnityEngine;
 
 public class FPCamera : MonoBehaviour
 {
-    public float sensitivity = 1.5f;
+    // Todo: do some settings to pull sensitivity from\
+    // Todo: add invert y feature
+    // Todo: clean up this shit
+    private Transform cameraTransform;
+    public float xSensitivity = 1.5f;
+    public float ySensitivity = 30f;
     public float smoothing = 1.5f;
     public bool canMove = true;
 
     private float xMousePos;
-    private float smoothedMousePos;
+    private float yMousePos;
+    private float verticalRotation = 0f;
 
-    private float currentLookingPos;
+    private void Awake()
+    {
+        cameraTransform = GetComponentInChildren<Camera>().transform;
+
+        if (cameraTransform == null)
+            Debug.LogError($"Couldn't find Camera under {this.name}", this);
+    }
 
     private void Start()
     {
@@ -22,29 +34,56 @@ public class FPCamera : MonoBehaviour
 
     void Update()
     {
-        GetInput();
-        ModifyInput();
-        MovePlayerCamera();
+        //GetInput();
+        //ModifyInput();
+        //MovePlayerCamera();
+
+        if (canMove)
+        {
+            xMousePos = Input.GetAxis("Mouse X") * xSensitivity;
+            yMousePos = Input.GetAxis("Mouse Y") * ySensitivity;
+
+            // Vertical Modification
+            verticalRotation -= yMousePos * Time.deltaTime;
+            verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
+
+            // Move
+            transform.Rotate(Vector3.up * xMousePos); // Horizontal
+            cameraTransform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f); // Vertical
+        }
     }
 
     private void GetInput()
     {
-        xMousePos = Input.GetAxisRaw("Mouse X");
+        xMousePos = Input.GetAxis("Mouse X");
+        yMousePos = Input.GetAxis("Mouse Y");
+        Debug.Log($"Get Input: yMousePos = {yMousePos}");
     }
 
     private void ModifyInput()
     {
-        xMousePos *= sensitivity * smoothing;
-        smoothedMousePos = Mathf.Lerp(smoothedMousePos, xMousePos, 1f / smoothing);
+        // Horizontal
+        xMousePos *= xSensitivity;
+        //smoothedXMousePos = Mathf.Lerp(smoothedXMousePos, xMousePos, 1f / smoothing);
+
+        // Vertical
+        float clampVal = Mathf.Clamp(yMousePos * xSensitivity * -1, -90, 90);
+        Debug.Log($"ModifyInput: clamp = {Mathf.Clamp(clampVal, -90, 90)}");
+        yMousePos = Mathf.Clamp(xSensitivity * yMousePos * -1, -90, 90);
+        //smoothedYMousePos = Mathf.Clamp(Mathf.Lerp(smoothedYMousePos, yMousePos, 1f / smoothing), -90f, 90f);
     }
 
     private void MovePlayerCamera()
     {
         if (canMove)
         {
-            currentLookingPos += smoothedMousePos;
-            transform.localRotation = Quaternion.AngleAxis(currentLookingPos, transform.up);
+            // Horizontal
+            //currentLookingXPos += smoothedXMousePos;
+            transform.Rotate(Vector3.up * xMousePos);
 
+            // Vertical
+            //currentLookingYPos += smoothedYMousePos;
+            cameraTransform.localRotation = Quaternion.Euler(yMousePos, 0f, 0f);
         }
     }
 
