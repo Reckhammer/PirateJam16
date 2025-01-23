@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d76933e1f3fc8404b972d0054860b9f0
+guid: 9129129c909f8524fbef9df5804c5d54
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -10,7 +10,7 @@ ModelImporter:
       name: Texture_MAT
     second: {fileID: 2100000, guid: 7d67942dc998f714eb5f584f8720ed1d, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
