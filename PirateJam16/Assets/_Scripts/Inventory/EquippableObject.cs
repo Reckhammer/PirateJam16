@@ -25,6 +25,11 @@ public class EquippableObject : InteractableObject
         isEquipped = false;
     }
 
+    public virtual void UseItem()
+    {
+        throw new System.NotImplementedException();
+    }
+
     protected virtual void SetToEquipPosition()
     {
         this.transform.localPosition = equippedPositionOffset;
