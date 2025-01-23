@@ -18,7 +18,7 @@ public class PlayerInteractableRaycaster : MonoBehaviour
             if (hitObject.TryGetComponent(out InteractableObject interactable))
             {
                 selectedItem = interactable;
-                Debug.Log($"{interactable.name} selected", this);
+                //Debug.Log($"{interactable.name} selected", this);
             }
 
             //Debug.Log($"{hitObject.name} was hit by a interactable raycast", this);
