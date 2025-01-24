@@ -5,6 +5,7 @@ public class FPCamera : MonoBehaviour
     // Todo: do some settings to pull sensitivity from\
     // Todo: add invert y feature
     // Todo: clean up this shit
+    public Camera m_Camera;
     private Transform cameraTransform;
     public float xSensitivity = 1.5f;
     public float ySensitivity = 30f;
@@ -17,7 +18,8 @@ public class FPCamera : MonoBehaviour
 
     private void Awake()
     {
-        cameraTransform = GetComponentInChildren<Camera>().transform;
+        m_Camera = GetComponentInChildren<Camera>();
+        cameraTransform = m_Camera.transform;
 
         if (cameraTransform == null)
             Debug.LogError($"Couldn't find Camera under {this.name}", this);

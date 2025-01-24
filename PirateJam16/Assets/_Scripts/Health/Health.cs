@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Todo: make this into abstract class and implement children with int, float, etc. health values
 public class Health : MonoBehaviour
 {
     [Header("Health")]
