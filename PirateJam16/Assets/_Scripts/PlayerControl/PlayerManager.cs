@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     public FPMovement playerMovement;
     public Health playerHealth;
     public PlayerInventory playerInventory;
+    public PlayerInteractableRaycaster playerInteractor;
 
     public bool disableMovementOnDeath = true;
 

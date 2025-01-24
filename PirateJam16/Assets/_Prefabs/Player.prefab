@@ -270,6 +270,7 @@ MonoBehaviour:
   playerMovement: {fileID: 4886427212667861510}
   playerHealth: {fileID: 6803246344116200384}
   playerInventory: {fileID: 2132213890868605316}
+  playerInteractor: {fileID: 1319759631854628355}
   disableMovementOnDeath: 1
 --- !u!114 &4886427212667861510
 MonoBehaviour:
