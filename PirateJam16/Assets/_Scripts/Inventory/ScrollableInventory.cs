@@ -25,4 +25,14 @@ public class ScrollableInventory : PlayerInventory
     {
         throw new System.NotImplementedException();
     }
+
+    public override bool IsEquipped(EquippableObject item)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override bool IsInInventory(EquippableObject item)
+    {
+        throw new System.NotImplementedException();
+    }
 }

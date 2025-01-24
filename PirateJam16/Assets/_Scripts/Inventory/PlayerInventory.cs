@@ -20,4 +20,8 @@ public abstract class PlayerInventory : MonoBehaviour
 
         child.transform.parent = newParent;
     }
+
+    public abstract bool IsEquipped(EquippableObject item);
+    public abstract bool IsInInventory(EquippableObject item);
+
 }

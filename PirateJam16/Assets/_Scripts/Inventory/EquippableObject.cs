@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EquippableObject : InteractableObject
 {
+    [Header("Equippable Object")]
     public Vector3 equippedPositionOffset;
     public Vector3 equippedRotationOffset;
 
@@ -33,6 +34,6 @@ public class EquippableObject : InteractableObject
     protected virtual void SetToEquipPosition()
     {
         this.transform.localPosition = equippedPositionOffset;
-        this.transform.Rotate(equippedRotationOffset);
+        this.transform.localRotation = Quaternion.Euler(equippedRotationOffset);
     }
 }

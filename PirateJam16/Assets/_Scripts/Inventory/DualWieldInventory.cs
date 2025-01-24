@@ -36,6 +36,8 @@ public class DualWieldInventory : PlayerInventory
 
     public override void Drop(EquippableObject itemToDrop)
     {
+        if (itemToDrop == null) return;
+
         if (itemToDrop == leftSlot)
         {
             leftSlot = null;
@@ -47,6 +49,16 @@ public class DualWieldInventory : PlayerInventory
 
         RemoveChild(itemToDrop);
         itemToDrop.Unequip();
+    }
+
+    public override bool IsEquipped(EquippableObject item)
+    {
+        return item == rightSlot || item == leftSlot;
+    }
+
+    public override bool IsInInventory(EquippableObject item)
+    {
+        return IsEquipped(item);
     }
 
     private void Update()
@@ -62,8 +74,10 @@ public class DualWieldInventory : PlayerInventory
     {
         if (leftSlot != null)
             return leftSlot;
-        else
+        else if (rightSlot != null)
             return rightSlot;
+
+        return null;
     }
 
     private void AdjustPositionForSlot(EquippableObject item, bool isRight)
