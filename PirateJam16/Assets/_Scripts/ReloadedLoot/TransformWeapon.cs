@@ -7,6 +7,7 @@ public class TransformWeapon : TransformItem
     private float nextTimeCanFire = 0f;
     public Projectile projectilePrefab;
     public Transform projectileSpawn;
+    private Transform cameraTransform => PlayerManager.instance.playerCamera.m_Camera.transform;
 
     public override void UseItem()
     {
@@ -16,10 +17,11 @@ public class TransformWeapon : TransformItem
 
     public void Fire()
     {
-        Projectile spawnedBullet = Instantiate<Projectile>(projectilePrefab);
+        Projectile spawnedBullet = Instantiate<Projectile>(projectilePrefab, projectileSpawn.position, projectileSpawn.rotation);
 
+        // Add boolean for using camera or weapon transform
         // Get direction to send bullet
-        Ray ray = PlayerManager.instance.playerCamera.m_Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
         RaycastHit hit;
         Vector3 targetPoint;
 
@@ -34,7 +36,7 @@ public class TransformWeapon : TransformItem
 
         spawnedBullet.Shoot(shootDirection);
 
-        // play sfx
+        // play sfx and animation
 
         nextTimeCanFire = Time.time + fireDelay;
     }

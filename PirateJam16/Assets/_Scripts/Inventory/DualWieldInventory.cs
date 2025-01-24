@@ -68,6 +68,11 @@ public class DualWieldInventory : PlayerInventory
         {
             Drop(GetFilledSlot());
         }
+
+        if (Input.GetMouseButtonDown(0) && rightSlot != null)
+            rightSlot.UseItem();
+        if (Input.GetMouseButtonDown(1) && leftSlot != null)
+            leftSlot.UseItem();
     }
 
     private EquippableObject GetFilledSlot()
