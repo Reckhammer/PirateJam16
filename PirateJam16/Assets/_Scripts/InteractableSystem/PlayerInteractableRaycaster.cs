@@ -20,6 +20,10 @@ public class PlayerInteractableRaycaster : MonoBehaviour
                 selectedItem = interactable;
                 //Debug.Log($"{interactable.name} selected", this);
             }
+            else
+            {
+                selectedItem = null;
+            }
 
             //Debug.Log($"{hitObject.name} was hit by a interactable raycast", this);
         }
