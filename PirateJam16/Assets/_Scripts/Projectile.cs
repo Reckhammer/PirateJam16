@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
 
     public void Shoot(Vector3 direction)
     {
-        transform.forward = direction;
+        transform.forward = direction.normalized;
         m_rigidbody.AddForce(direction * velocity, ForceMode.Impulse);
 
         StartCoroutine(DestroyAfterTTL());
