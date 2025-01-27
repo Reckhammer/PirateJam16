@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: 2c1c7133221f3d94e93db93b728eee6c
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 0
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: npc_arrestIdle
+      takeName: npc_arrestIdle
+      internalID: -2217060802725118893
+      firstFrame: 220
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 220
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Character_NPC_01(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ctrls
+      parentName: Character_NPC_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: l_leg_loc_offset
+      parentName: ctrls
+      position: {x: 0.125, y: 0.000009933641, z: -4.1011637e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: l_leg_loc
+      parentName: l_leg_loc_offset
+      position: {x: -0, y: 0, z: -4.1011637e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ikHandle_l_leg
+      parentName: l_leg_loc
+      position: {x: -0, y: -0.000009933641, z: 4.1011637e-15}
+      rotation: {x: 0.0015028286, y: 0.0000012957117, z: 0.0066661984, w: 0.9999767}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_leg_loc_offset
+      parentName: ctrls
+      position: {x: -0.125, y: 0.0000099674235, z: -2.6523227e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_leg_loc
+      parentName: r_leg_loc_offset
+      position: {x: -0, y: 0.000009933641, z: -4.1011637e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ikHandle_r_leg
+      parentName: r_leg_loc
+      position: {x: -0, y: -0.000009933641, z: 4.1011637e-15}
+      rotation: {x: 0.001501868, y: 0.0000000031734075, z: 0.0066662002, w: 0.9999767}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_worldRef_offset
+      parentName: Character_NPC_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_worldRef
+      parentName: jt_worldRef_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_root_offset
+      parentName: jt_worldRef
+      position: {x: -0, y: 0.825, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_root
+      parentName: jt_root_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -1, z: -0, w: 0}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_hip_offset
+      parentName: jt_root
+      position: {x: 0.125, y: -0.074999996, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_hip
+      parentName: jt_l_hip_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.0035129893, y: 0.7069964, z: 0.012939627, w: 0.7070901}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_knee_offset
+      parentName: jt_l_hip
+      position: {x: -0, y: -0.375, z: -0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_knee
+      parentName: jt_l_knee_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.0070258123, y: -0.7069782, z: -0.0070258123, w: 0.70716554}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_foot_offset
+      parentName: jt_l_knee
+      position: {x: -0, y: -0.375, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_foot
+      parentName: jt_l_foot_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1.1050316e-16, y: 1.1121543e-16, z: 4.2313346e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_hip_offset
+      parentName: jt_root
+      position: {x: -0.125, y: -0.074999996, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_hip
+      parentName: jt_r_hip_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.0036514217, y: 0.7069929, z: 0.013078056, w: 0.70709026}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_knee_offset
+      parentName: jt_r_hip
+      position: {x: -0, y: -0.375, z: -0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_knee
+      parentName: jt_r_knee_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.007302673, y: -0.7069717, z: -0.007302673, w: 0.70716643}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_foot_offset
+      parentName: jt_r_knee
+      position: {x: -0, y: -0.375, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_foot
+      parentName: jt_r_foot_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -2.168856e-19, y: -6.7762636e-21, z: -1.7347133e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_chest_offset
+      parentName: jt_root
+      position: {x: -0, y: 0.29999998, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_chest
+      parentName: jt_chest_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_neck_offset
+      parentName: jt_chest
+      position: {x: -0, y: 0.375, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_neck
+      parentName: jt_neck_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_shoulder_offset
+      parentName: jt_chest
+      position: {x: -0.25, y: 0.375, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_shoulder
+      parentName: jt_r_shoulder_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0.7040147, w: 0.7101854}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_elbow_offset
+      parentName: jt_r_shoulder
+      position: {x: -0, y: -0.375, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_elbow
+      parentName: jt_r_elbow_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_foot_offset
+      parentName: jt_r_elbow
+      position: {x: -0, y: -0.375, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_r_wrist
+      parentName: jt_r_foot_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_shoulder_offset
+      parentName: jt_chest
+      position: {x: 0.25, y: 0.375, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_shoulder
+      parentName: jt_l_shoulder_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: 0.7040147, w: 0.7101854}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_elbow_offset
+      parentName: jt_l_shoulder
+      position: {x: -0, y: -0.375, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_elbow
+      parentName: jt_l_elbow_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_foot_offset
+      parentName: jt_l_elbow
+      position: {x: -0, y: -0.375, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: jt_l_wrist
+      parentName: jt_l_foot_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Character_Mesh
+      parentName: Character_NPC_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 122710af059dabf43bbf31dccf9282b3, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
