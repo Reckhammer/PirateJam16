@@ -42,11 +42,11 @@ public class FPCamera : MonoBehaviour
 
         if (canMove)
         {
-            xMousePos = Input.GetAxis("Mouse X") * xSensitivity;
-            yMousePos = Input.GetAxis("Mouse Y") * ySensitivity;
+            xMousePos = Input.GetAxis("Mouse X") * xSensitivity * Time.deltaTime;
+            yMousePos = Input.GetAxis("Mouse Y") * ySensitivity * Time.deltaTime;
 
             // Vertical Modification
-            verticalRotation -= yMousePos * Time.deltaTime;
+            verticalRotation -= yMousePos;
             verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
 
             // Move
