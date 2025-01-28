@@ -305,8 +305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 0}
-  xSensitivity: 1.5
-  ySensitivity: 80
+  xSensitivity: 100
+  ySensitivity: 100
   smoothing: 1.5
   canMove: 1
 --- !u!114 &6803246344116200384
