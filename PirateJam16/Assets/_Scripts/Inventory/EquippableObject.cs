@@ -3,6 +3,7 @@ using UnityEngine;
 public class EquippableObject : InteractableObject
 {
     [Header("Equippable Object")]
+    public bool isEquippable = true;
     public Vector3 equippedPositionOffset;
     public Vector3 equippedRotationOffset;
 
@@ -16,9 +17,12 @@ public class EquippableObject : InteractableObject
 
     public virtual void Equip() 
     {
-        Debug.Log($"Equipping {this.name}", this);
-        isEquipped = true;
-        SetToEquipPosition(); 
+        if (isEquippable)
+        {
+            Debug.Log($"Equipping {this.name}", this);
+            isEquipped = true;
+            SetToEquipPosition();
+        }
     }
 
     public virtual void Unequip() 
