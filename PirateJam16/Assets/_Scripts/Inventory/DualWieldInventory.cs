@@ -31,6 +31,7 @@ public class DualWieldInventory : PlayerInventory
             Drop(leftSlot);
             leftSlot = itemToEquip;
             itemToEquip.Equip();
+            AdjustPositionForSlot(itemToEquip, false);
         }
     }
 

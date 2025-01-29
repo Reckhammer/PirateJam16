@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class KeyItem : TransformItem
@@ -18,12 +19,24 @@ public class KeyItem : TransformItem
     {
         if (isEquipped /*&& selectedLock != null*/)
         {
+            base.UseItem();
             if (selectedLock != null)
             {
-                selectedLock.Unlock();
-                playerInventory.Drop(this);
-                Destroy(this.gameObject);
+                StartCoroutine(UseRoutine());
             }
         }
+    }
+
+    private IEnumerator UseRoutine()
+    {
+        // Do animations and stuff
+        //base.UseItem();
+
+        selectedLock.Unlock();
+
+        yield return new WaitForSeconds(1f);
+
+        playerInventory.Drop(this);
+        Destroy(this.gameObject);
     }
 }

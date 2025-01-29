@@ -9,6 +9,9 @@ public class TransformItem : EquippableObject
 
     private Rigidbody m_rigidbody;
 
+    [Header("Animations")]
+    public Animator animator;
+
     public virtual void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody>();
@@ -26,6 +29,8 @@ public class TransformItem : EquippableObject
     {
         base.Equip();
 
+        PlayAnimation("Ready");
+
         m_rigidbody.isKinematic = true;
         m_rigidbody.useGravity  = false;
     }
@@ -36,5 +41,16 @@ public class TransformItem : EquippableObject
 
         m_rigidbody.isKinematic = false;
         m_rigidbody.useGravity  = true;
+    }
+
+    public override void UseItem()
+    {
+        PlayAnimation("Fire");
+    }
+
+    private void PlayAnimation(string animId)
+    {
+        if (animator != null)
+            animator.SetTrigger(animId);
     }
 }

@@ -21,6 +21,9 @@ public class Sandwich : TransformItem
 
     private void Heal()
     {
+        // Do animations and stuff
+        base.UseItem();
+
         playerHealth.ChangeHealth(healthAmt);
         nextTimeCanUse = Time.time + delay;
 

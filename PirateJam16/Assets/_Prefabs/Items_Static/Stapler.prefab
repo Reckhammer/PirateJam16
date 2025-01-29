@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3857851708503791588}
   - component: {fileID: 2479847322246817079}
   - component: {fileID: 7166015988325038909}
+  - component: {fileID: 2200382822389617976}
   m_Layer: 0
   m_Name: Stapler
   m_TagString: Untagged
@@ -106,9 +107,27 @@ MonoBehaviour:
   defaultModel: {fileID: 1982839074872637467}
   transformModel: {fileID: 7788633708207574274}
   isTransformed: 0
+  animator: {fileID: 3584079631069023682}
   fireDelay: 0.1
   projectilePrefab: {fileID: 0}
   projectileSpawn: {fileID: 5006977109506698086}
+--- !u!114 &2200382822389617976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3025491219828821779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b62fe079c95c4d4f8904f466a46f433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3584079631069023682}
+  overrideControllerTemplate: {fileID: 22100000, guid: 653a1730b0c65ef4cb9cf739fa204661, type: 2}
+  readyClip: {fileID: 9067093048684652814, guid: 8c8cebc0fdee0f643a5ce146fa2158ec, type: 3}
+  idleClip: {fileID: -8481709605947105597, guid: 8c8cebc0fdee0f643a5ce146fa2158ec, type: 3}
+  fireClip: {fileID: 1178167638873134046, guid: 8c8cebc0fdee0f643a5ce146fa2158ec, type: 3}
 --- !u!1 &5119573583535214314
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +291,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c8cebc0fdee0f643a5ce146fa2158ec, type: 3}
+--- !u!95 &3584079631069023682 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 8c8cebc0fdee0f643a5ce146fa2158ec, type: 3}
+  m_PrefabInstance: {fileID: 6978222922369708115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7448137653681706936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c8cebc0fdee0f643a5ce146fa2158ec, type: 3}

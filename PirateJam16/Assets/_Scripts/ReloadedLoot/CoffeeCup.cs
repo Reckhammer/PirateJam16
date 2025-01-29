@@ -17,6 +17,9 @@ public class CoffeeCup : TransformItem
 
     private IEnumerator ActivateEffectCoroutine()
     {
+        // Do animations and stuff
+        base.UseItem();
+
         inEffect = true;
         playerMovement.walkingSpeed += moveSpeedDelta;
         playerMovement.sprintSpeed  += moveSpeedDelta;

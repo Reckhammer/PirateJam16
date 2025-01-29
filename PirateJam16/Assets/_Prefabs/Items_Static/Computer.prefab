@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6770075898826988113}
   - component: {fileID: 5448700374262851111}
   - component: {fileID: 6664847715379221748}
+  - component: {fileID: 811685164084370968}
   m_Layer: 0
   m_Name: Computer
   m_TagString: Untagged
@@ -52,7 +53,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.5958192, y: 0.7077608, z: 0.80975807}
   m_Center: {x: 0.0018234551, y: 0.35360497, z: -0.010814995}
@@ -83,6 +84,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &811685164084370968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334541107406110416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c2c0c36211bca4eaf11a057425ab99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionWord: Pickup
+  niceName: Computer
+  isEquippable: 1
+  equippedPositionOffset: {x: 0.3, y: -0.1, z: 0.5}
+  equippedRotationOffset: {x: 0, y: 0, z: 0}
+  isEquipped: 0
+  defaultModel: {fileID: 7651215964223572351}
+  transformModel: {fileID: 5496109801986186872}
+  isTransformed: 0
+  animator: {fileID: 1291942409795559096}
 --- !u!1001 &4649812061631603497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97,7 +120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ded3bb58e7a1b3478318924860da81f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.455
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ded3bb58e7a1b3478318924860da81f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -139,16 +162,71 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4ded3bb58e7a1b3478318924860da81f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d3a3bd5f56bddd04296f485258b14ba7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ded3bb58e7a1b3478318924860da81f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6255565025428509946}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ded3bb58e7a1b3478318924860da81f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4275643617837102361}
   m_SourcePrefab: {fileID: 100100000, guid: 4ded3bb58e7a1b3478318924860da81f, type: 3}
+--- !u!95 &1291942409795559096 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 4ded3bb58e7a1b3478318924860da81f, type: 3}
+  m_PrefabInstance: {fileID: 4649812061631603497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5119970531446981826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4ded3bb58e7a1b3478318924860da81f, type: 3}
   m_PrefabInstance: {fileID: 4649812061631603497}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5496109801986186872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ded3bb58e7a1b3478318924860da81f, type: 3}
+  m_PrefabInstance: {fileID: 4649812061631603497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6255565025428509946
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5496109801986186872}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16847262, y: 0.25132948, z: 1.6303034}
+  m_Center: {x: -0.03107123, y: -0.057703763, z: 0.5903547}
+--- !u!114 &4275643617837102361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5496109801986186872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1ffa18517e48d418164cbcb2aed406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionWord: Pickup
+  niceName: Computer
 --- !u!1001 &7417426044922442798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -208,10 +286,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 223d64e64ff55964ba13d4f694684d11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8812746730915590128}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 223d64e64ff55964ba13d4f694684d11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2116005258334154611}
   m_SourcePrefab: {fileID: 100100000, guid: 223d64e64ff55964ba13d4f694684d11, type: 3}
 --- !u!4 &7018091242490188741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 223d64e64ff55964ba13d4f694684d11, type: 3}
   m_PrefabInstance: {fileID: 7417426044922442798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7651215964223572351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 223d64e64ff55964ba13d4f694684d11, type: 3}
+  m_PrefabInstance: {fileID: 7417426044922442798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8812746730915590128
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651215964223572351}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5570367, y: 0.69621205, z: 0.7701042}
+  m_Center: {x: 0, y: 0.34810603, z: 0}
+--- !u!114 &2116005258334154611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651215964223572351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1ffa18517e48d418164cbcb2aed406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionWord: Pickup
+  niceName: Computer

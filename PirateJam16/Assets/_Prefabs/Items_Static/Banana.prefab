@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 2712911769687937662}
   - component: {fileID: 3622536022799212717}
   - component: {fileID: 2983350261479754990}
+  - component: {fileID: 547897082812220687}
   m_Layer: 0
   m_Name: Banana
   m_TagString: Untagged
@@ -130,15 +131,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionWord: Pickup
   niceName: Banana
+  isEquippable: 1
   equippedPositionOffset: {x: 0.15, y: -0.07, z: 0.395}
   equippedRotationOffset: {x: 0, y: 0, z: 0}
   isEquipped: 0
   defaultModel: {fileID: 6339787228281735943}
   transformModel: {fileID: 9201327526528803173}
   isTransformed: 0
+  animator: {fileID: 2457367644668977573}
   fireDelay: 0.5
   projectilePrefab: {fileID: 5095379700325797722, guid: 8e547b87ca8a2b447a2af9d22b6ca40b, type: 3}
   projectileSpawn: {fileID: 6208723969042856912}
+--- !u!114 &547897082812220687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4166763613107554953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b62fe079c95c4d4f8904f466a46f433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2457367644668977573}
+  overrideControllerTemplate: {fileID: 22100000, guid: 653a1730b0c65ef4cb9cf739fa204661, type: 2}
+  readyClip: {fileID: 9067093048684652814, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
+  idleClip: {fileID: -8481709605947105597, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
+  fireClip: {fileID: 1178167638873134046, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
 --- !u!1001 &6573596520972006998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,19 +252,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.935178
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.35417822
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -271,6 +291,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
+--- !u!95 &2457367644668977573 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}
+  m_PrefabInstance: {fileID: 8318367811118881844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8429188254971313119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 83ff3ea6efa49564596112f144d9a765, type: 3}

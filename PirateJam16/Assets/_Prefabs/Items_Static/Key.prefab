@@ -105,7 +105,9 @@ MonoBehaviour:
   defaultModel: {fileID: 518217219441048582}
   transformModel: {fileID: 5444832220232612613}
   isTransformed: 0
+  animator: {fileID: 1595420467946945477}
   unlockType: 0
+  selectedLock: {fileID: 0}
 --- !u!1001 &860321674166993239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -229,11 +231,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: cd7f672c779aec4499627175e400a75b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e153bea077f647443869995c9ec10018, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd7f672c779aec4499627175e400a75b, type: 3}
+--- !u!95 &1595420467946945477 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: cd7f672c779aec4499627175e400a75b, type: 3}
+  m_PrefabInstance: {fileID: 5138193619015812692}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4666923983497634239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cd7f672c779aec4499627175e400a75b, type: 3}

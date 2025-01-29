@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2252705471737209474}
   - component: {fileID: 621725449818509393}
   - component: {fileID: 4011354439042671130}
+  - component: {fileID: 4919692848501396117}
   m_Layer: 0
   m_Name: Sandwich
   m_TagString: Untagged
@@ -105,9 +106,27 @@ MonoBehaviour:
   defaultModel: {fileID: 3865918019927752883}
   transformModel: {fileID: 3532585385300158908}
   isTransformed: 0
+  animator: {fileID: 7831126197516953980}
   healthAmt: 10
   numUses: 3
   delay: 2
+--- !u!114 &4919692848501396117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231465049930922613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b62fe079c95c4d4f8904f466a46f433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7831126197516953980}
+  overrideControllerTemplate: {fileID: 22100000, guid: 653a1730b0c65ef4cb9cf739fa204661, type: 2}
+  readyClip: {fileID: 9067093048684652814, guid: 69dc06fce8d46e3428e9534ae8eb933c, type: 3}
+  idleClip: {fileID: -8481709605947105597, guid: 69dc06fce8d46e3428e9534ae8eb933c, type: 3}
+  fireClip: {fileID: 1178167638873134046, guid: 69dc06fce8d46e3428e9534ae8eb933c, type: 3}
 --- !u!1001 &4136299130943077858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,5 +287,10 @@ BoxCollider:
 --- !u!4 &4201175782841463558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 69dc06fce8d46e3428e9534ae8eb933c, type: 3}
+  m_PrefabInstance: {fileID: 4451573352267535597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7831126197516953980 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 69dc06fce8d46e3428e9534ae8eb933c, type: 3}
   m_PrefabInstance: {fileID: 4451573352267535597}
   m_PrefabAsset: {fileID: 0}

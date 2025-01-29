@@ -106,6 +106,7 @@ MonoBehaviour:
   defaultModel: {fileID: 9463418408247045}
   transformModel: {fileID: 5215215395556751312}
   isTransformed: 0
+  animator: {fileID: 1570585003522488080}
   fireDelay: 0.5
   projectilePrefab: {fileID: 3065853629260798280, guid: 6fa478162e260174b968d4a9655a44ae, type: 3}
   projectileSpawn: {fileID: 3540003193582070398}
@@ -267,11 +268,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4723016a49dc3a24a8823255d022461c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f7e1a4094ebe25e419e7702ae5f43552, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4723016a49dc3a24a8823255d022461c, type: 3}
+--- !u!95 &1570585003522488080 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 4723016a49dc3a24a8823255d022461c, type: 3}
+  m_PrefabInstance: {fileID: 4945307622015486593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4840237556874259818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4723016a49dc3a24a8823255d022461c, type: 3}

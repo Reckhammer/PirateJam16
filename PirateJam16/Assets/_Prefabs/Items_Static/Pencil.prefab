@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 442336790710393317}
   - component: {fileID: 1279190828343372598}
   - component: {fileID: 8335525557215533689}
+  - component: {fileID: 9063334883220279543}
   m_Layer: 0
   m_Name: Pencil
   m_TagString: Untagged
@@ -106,9 +107,27 @@ MonoBehaviour:
   defaultModel: {fileID: 4758919474295246951}
   transformModel: {fileID: 608664309025719841}
   isTransformed: 0
+  animator: {fileID: 6186138904150820577}
   fireDelay: 1
   projectilePrefab: {fileID: 5623640998501596531, guid: f99b7566091904b479f99f94e4777f8a, type: 3}
   projectileSpawn: {fileID: 6292897658738590677}
+--- !u!114 &9063334883220279543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897736710525305106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b62fe079c95c4d4f8904f466a46f433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6186138904150820577}
+  overrideControllerTemplate: {fileID: 22100000, guid: 653a1730b0c65ef4cb9cf739fa204661, type: 2}
+  readyClip: {fileID: 9067093048684652814, guid: 278ba48d35c8e7240879bc2c413f875c, type: 3}
+  idleClip: {fileID: -8481709605947105597, guid: 278ba48d35c8e7240879bc2c413f875c, type: 3}
+  fireClip: {fileID: 1178167638873134046, guid: 278ba48d35c8e7240879bc2c413f875c, type: 3}
 --- !u!1 &8534248671498569580
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 8534248671498569580}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0.6}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -252,6 +271,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionWord: Pickup
   niceName: Pencil
+--- !u!95 &6186138904150820577 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 278ba48d35c8e7240879bc2c413f875c, type: 3}
+  m_PrefabInstance: {fileID: 338615664852007792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5677488671213989174
 PrefabInstance:
   m_ObjectHideFlags: 0

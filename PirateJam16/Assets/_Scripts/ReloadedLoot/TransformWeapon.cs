@@ -17,6 +17,9 @@ public class TransformWeapon : TransformItem
 
     public void Fire()
     {
+        // Do animations and stuff
+        base.UseItem();
+
         Projectile spawnedBullet = Instantiate<Projectile>(projectilePrefab, projectileSpawn.position, projectileSpawn.rotation);
 
         // Add boolean for using camera or weapon transform

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4662336756811382184}
   - component: {fileID: 6291551925389496187}
   - component: {fileID: 8299557612604336778}
+  - component: {fileID: 845689681834529217}
   m_Layer: 0
   m_Name: CoffeeCup
   m_TagString: Untagged
@@ -98,14 +99,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionWord: Pickup
   niceName: Coffee Cup
+  isEquippable: 1
   equippedPositionOffset: {x: 0.25, y: -0.25, z: 0.4}
   equippedRotationOffset: {x: 0, y: 0, z: 0}
   isEquipped: 0
   defaultModel: {fileID: 1037744035555624253}
   transformModel: {fileID: 9073812459029533012}
   isTransformed: 0
+  animator: {fileID: 2325920242485006740}
   moveSpeedDelta: 10
   effectDuration: 10
+--- !u!114 &845689681834529217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685190231182304607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b62fe079c95c4d4f8904f466a46f433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2325920242485006740}
+  overrideControllerTemplate: {fileID: 22100000, guid: 653a1730b0c65ef4cb9cf739fa204661, type: 2}
+  readyClip: {fileID: 9067093048684652814, guid: 396a9d0a7f3138340ab3593e2d27c299, type: 3}
+  idleClip: {fileID: -8481709605947105597, guid: 396a9d0a7f3138340ab3593e2d27c299, type: 3}
+  fireClip: {fileID: 1178167638873134046, guid: 396a9d0a7f3138340ab3593e2d27c299, type: 3}
 --- !u!1001 &191305550063990892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -234,6 +254,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 396a9d0a7f3138340ab3593e2d27c299, type: 3}
+--- !u!95 &2325920242485006740 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 396a9d0a7f3138340ab3593e2d27c299, type: 3}
+  m_PrefabInstance: {fileID: 8155387302428093445}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8549935422527523822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 396a9d0a7f3138340ab3593e2d27c299, type: 3}
