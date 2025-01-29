@@ -10,7 +10,7 @@ public class KeyItem : TransformItem
 
     [Header("Key Item")]
     public KeyType unlockType;
-    //public LockedObject selectedLock;
+    public LockedObject selectedLock;
 
     private PlayerInventory playerInventory => PlayerManager.instance.playerInventory;
 
@@ -18,9 +18,12 @@ public class KeyItem : TransformItem
     {
         if (isEquipped /*&& selectedLock != null*/)
         {
-            //selectedLock.Unlock();
-            playerInventory.Drop(this);
-            Destroy(this.gameObject);
+            if (selectedLock != null)
+            {
+                selectedLock.Unlock();
+                playerInventory.Drop(this);
+                Destroy(this.gameObject);
+            }
         }
     }
 }
