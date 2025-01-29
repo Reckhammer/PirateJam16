@@ -54,7 +54,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.19162849, y: 0.26992399, z: 0.34212098}
   m_Center: {x: -0.0025213212, y: -0.019603938, z: 0.09248243}
@@ -107,7 +107,7 @@ MonoBehaviour:
   transformModel: {fileID: 2399094537652033654}
   isTransformed: 0
   fireDelay: 0.5
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 8387810282938046771, guid: debe14a2cb6840c45bcb0a90e77e1314, type: 3}
   projectileSpawn: {fileID: 6345240624150444364}
 --- !u!1 &7038621057879451655
 GameObject:
@@ -134,7 +134,7 @@ Transform:
   m_GameObject: {fileID: 7038621057879451655}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.175, z: 0.737}
+  m_LocalPosition: {x: 0, y: 0.175, z: 0.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -199,13 +199,58 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a2a3f2a390d864e4e9ab6ab6b973f2c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3941129473728503389}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a2a3f2a390d864e4e9ab6ab6b973f2c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1713681550283643544}
   m_SourcePrefab: {fileID: 100100000, guid: a2a3f2a390d864e4e9ab6ab6b973f2c8, type: 3}
 --- !u!1 &2399094537652033654 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a2a3f2a390d864e4e9ab6ab6b973f2c8, type: 3}
   m_PrefabInstance: {fileID: 3281472750058300711}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &3941129473728503389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2399094537652033654}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20896456, y: 0.59039545, z: 0.90680945}
+  m_Center: {x: -0.0054180473, y: -0.033591986, z: 0.27632064}
+--- !u!114 &1713681550283643544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2399094537652033654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1ffa18517e48d418164cbcb2aed406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionWord: Pickup
+  niceName: Gun
+  isEquippable: 1
+  equippedPositionOffset: {x: 0, y: 0, z: 0}
+  equippedRotationOffset: {x: 0, y: 0, z: 0}
+  isEquipped: 0
 --- !u!4 &3026589829059314380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a2a3f2a390d864e4e9ab6ab6b973f2c8, type: 3}
@@ -270,7 +315,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 736e2ce0f8325404493bf12f8706230d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6973604044134203676}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 736e2ce0f8325404493bf12f8706230d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6576211186479665042}
   m_SourcePrefab: {fileID: 100100000, guid: 736e2ce0f8325404493bf12f8706230d, type: 3}
 --- !u!4 &3742808109292214358 stripped
 Transform:
@@ -282,3 +333,42 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 736e2ce0f8325404493bf12f8706230d, type: 3}
   m_PrefabInstance: {fileID: 3781784916793835453}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &6973604044134203676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087844085985968876}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1858642, y: 0.042294476, z: 0.28595957}
+  m_Center: {x: -0.015203372, y: 0.021147238, z: 0.049979758}
+--- !u!114 &6576211186479665042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087844085985968876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1ffa18517e48d418164cbcb2aed406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionWord: Pickup
+  niceName: Gun
+  isEquippable: 1
+  equippedPositionOffset: {x: 0, y: 0, z: 0}
+  equippedRotationOffset: {x: 0, y: 0, z: 0}
+  isEquipped: 0

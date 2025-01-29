@@ -54,7 +54,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.053961016, y: 0.07872145, z: 0.4467957}
   m_Center: {x: 0.0025597615, y: 0.0006306991, z: 0.16911104}
@@ -199,7 +199,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 278ba48d35c8e7240879bc2c413f875c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7889136995332924031}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 278ba48d35c8e7240879bc2c413f875c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5163216098123449274}
   m_SourcePrefab: {fileID: 100100000, guid: 278ba48d35c8e7240879bc2c413f875c, type: 3}
 --- !u!4 &232419553754193051 stripped
 Transform:
@@ -211,6 +217,41 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 278ba48d35c8e7240879bc2c413f875c, type: 3}
   m_PrefabInstance: {fileID: 338615664852007792}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &7889136995332924031
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608664309025719841}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12022233, y: 0.1984765, z: 0.664591}
+  m_Center: {x: 0.0035909414, y: -0.03987333, z: 0.085496426}
+--- !u!114 &5163216098123449274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608664309025719841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1ffa18517e48d418164cbcb2aed406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionWord: Pickup
+  niceName: Pencil
 --- !u!1001 &5677488671213989174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266,13 +307,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d76933e1f3fc8404b972d0054860b9f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3868302658208228088}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d76933e1f3fc8404b972d0054860b9f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8882570926901181421}
   m_SourcePrefab: {fileID: 100100000, guid: d76933e1f3fc8404b972d0054860b9f0, type: 3}
 --- !u!1 &4758919474295246951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d76933e1f3fc8404b972d0054860b9f0, type: 3}
   m_PrefabInstance: {fileID: 5677488671213989174}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &3868302658208228088
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758919474295246951}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019990362, y: 0.01999036, z: 0.4223535}
+  m_Center: {x: -4.656613e-10, y: 0.00999518, z: 0.025676392}
+--- !u!114 &8882570926901181421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758919474295246951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1ffa18517e48d418164cbcb2aed406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionWord: Pickup
+  niceName: Pencil
 --- !u!4 &5278434958354860765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d76933e1f3fc8404b972d0054860b9f0, type: 3}
