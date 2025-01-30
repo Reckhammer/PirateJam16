@@ -7,4 +7,18 @@ public abstract class InteractableObject : MonoBehaviour
     public string niceName;
 
     public abstract void Interact();
+    public virtual void OnHoverEnter()
+    {
+        InteractableUI.instance.ShowText(GetInteractableText());
+    }
+
+    public virtual void OnHoverExit()
+    {
+        InteractableUI.instance.HideText();
+    }
+
+    private string GetInteractableText()
+    {
+        return $"Press E to {actionWord} {niceName}";
+    }
 }
