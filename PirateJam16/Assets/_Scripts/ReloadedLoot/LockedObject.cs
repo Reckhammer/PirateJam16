@@ -8,6 +8,13 @@ public class LockedObject : MonoBehaviour
     public KeyItem.KeyType keyType;
     public Vector3 unlockedRotation = new Vector3(0f, 90f, 0f);
     public float lerpSpeed = 2f;
+    public Transform openObject;
+
+    private void Start()
+    {
+        if (openObject == null)
+            openObject = this.transform;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -34,18 +41,18 @@ public class LockedObject : MonoBehaviour
 
     private IEnumerator UnlockRoutine()
     {
-        Quaternion startRotation = transform.rotation;
+        Quaternion startRotation = openObject.rotation;
         Quaternion targetRotation = Quaternion.Euler(unlockedRotation);
         float elapsedTime = 0f;
         float duration = 1f / lerpSpeed; // Adjust duration based on speed
 
         while (elapsedTime < duration)
         {
-            transform.rotation = Quaternion.Lerp(startRotation, targetRotation, elapsedTime / duration);
+            openObject.rotation = Quaternion.Lerp(startRotation, targetRotation, elapsedTime / duration);
             elapsedTime += Time.deltaTime;
             yield return null; // Wait for the next frame
         }
 
-        transform.rotation = targetRotation; // Ensure it reaches the exact target rotation
+        openObject.rotation = targetRotation; // Ensure it reaches the exact target rotation
     }
 }
