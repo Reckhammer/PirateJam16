@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2111086e9078a4c9d90118788088be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 100
   currentHealth: 0
   isDead: 0
   uiHealthBar: {fileID: 0}
@@ -501,4 +501,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38fc2fb052dc4f94dbeb0e82353c00dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxRange: 3
   selectedItem: {fileID: 0}
