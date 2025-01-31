@@ -6,6 +6,7 @@ public class MoneyManager : MonoBehaviour
     public static MoneyManager instance;
     public int moneyCollected = 0;
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI moneyText2;
 
     private void Awake()
     {
@@ -26,5 +27,6 @@ public class MoneyManager : MonoBehaviour
     {
         moneyCollected += amountAdded;
         moneyText.text = moneyCollected.ToString();
+        moneyText2.text = moneyCollected.ToString();
     }
 }
