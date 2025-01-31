@@ -132,5 +132,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  velocity: 1
+  velocity: 3
   timeToLive: 2
