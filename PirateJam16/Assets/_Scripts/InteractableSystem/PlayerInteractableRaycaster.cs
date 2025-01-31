@@ -32,7 +32,7 @@ public class PlayerInteractableRaycaster : MonoBehaviour
                 InteractableUI.instance.HideText();
             }
 
-            Debug.Log($"{hitObject.name} was hit by a interactable raycast", this);
+            //Debug.Log($"{hitObject.name} was hit by a interactable raycast", this);
         }
 
         // Todo: use input action system
