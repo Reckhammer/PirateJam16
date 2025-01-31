@@ -10,6 +10,7 @@ public class Hacker : TransformItem
     public void HackTriggered()
     {
         animator.SetBool("Hack", true);
+        PlaySFX();
     }
 
     public void HackExited()

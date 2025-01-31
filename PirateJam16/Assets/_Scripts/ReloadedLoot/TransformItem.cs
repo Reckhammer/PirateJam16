@@ -12,9 +12,14 @@ public class TransformItem : EquippableObject
     [Header("Animations")]
     public Animator animator;
 
+    [Header("SFX")]
+    public AudioClip useSFX;
+    private AudioSource audioSource;
+
     public virtual void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public override void Interact()
@@ -46,11 +51,20 @@ public class TransformItem : EquippableObject
     public override void UseItem()
     {
         PlayAnimation("Fire");
+        PlaySFX();
     }
 
-    private void PlayAnimation(string animId)
+    protected void PlayAnimation(string animId)
     {
         if (animator != null)
             animator.SetTrigger(animId);
+    }
+
+    protected void PlaySFX()
+    {
+        if (useSFX == null) return;
+
+        audioSource.clip = useSFX;
+        audioSource.Play();
     }
 }

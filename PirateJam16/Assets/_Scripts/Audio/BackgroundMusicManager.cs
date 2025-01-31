@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class BackgroundMusicManager : MonoBehaviour
 {
+    public static BackgroundMusicManager instance;
+
     public AudioClip[] musicList;
     private AudioSource musicSource;
 
-    public bool playOnStart = false;
+    public bool singleSong = false;
     public bool playRandomFirst = false;
 
     private Coroutine musicListCoroutine;
 
     public void Awake()
     {
+        instance = this;
+
         if (musicList == null || musicList.Length == 0)
             Debug.LogWarning("No music provided", this);
 
@@ -22,8 +26,15 @@ public class BackgroundMusicManager : MonoBehaviour
 
     public void Start()
     {
-        if (playOnStart)
+        if (!singleSong)
             PlayMusicList();
+        else
+            PlayMusicClip(musicList[0]);
+    }
+
+    private void OnDestroy()
+    {
+        instance = null;
     }
 
     public void PlayMusicList()
