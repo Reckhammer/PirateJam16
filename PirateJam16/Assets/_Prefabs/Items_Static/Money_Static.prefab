@@ -87,5 +87,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4009943961739351246, guid: 6a8cabee220cd0e4395c713d05836f05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 41260064467895938}
   m_SourcePrefab: {fileID: 100100000, guid: 6a8cabee220cd0e4395c713d05836f05, type: 3}
+--- !u!1 &4800515700786682708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4009943961739351246, guid: 6a8cabee220cd0e4395c713d05836f05, type: 3}
+  m_PrefabInstance: {fileID: 8446770833076064154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &41260064467895938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4800515700786682708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b959af9f28a91db499eafb8db3956335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionWord: Collect
+  niceName: Cash
+  value: 100
