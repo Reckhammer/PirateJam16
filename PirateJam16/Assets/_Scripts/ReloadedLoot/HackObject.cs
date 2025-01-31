@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using static KeyItem;
 
 public class HackObject : InteractableObject
 {
@@ -9,17 +8,22 @@ public class HackObject : InteractableObject
     private Hacker hacker;
     private bool hackStarted = false;
 
+    public CollisionEventListener hackAreaTrigger;
+
     public Transform openObject;
     public Vector3 hackedRotation;
-    public float lerpSpeed = 2f;
+    public float lerpSpeed = 2f; // make this seconds
 
     private void Start()
     {
         if (openObject == null)
             openObject = transform;
+
+        hackAreaTrigger.OnTriggerEntered += HackAreaTriggerEnter;
+        hackAreaTrigger.OnTriggerExited += HackAreaTriggerExit;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void HackAreaTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Hacker>(out Hacker triggeredHacker))
         {
@@ -27,7 +31,7 @@ public class HackObject : InteractableObject
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void HackAreaTriggerExit(Collider other)
     {
         if (other.TryGetComponent<Hacker>(out Hacker triggeredHacker))
         {
