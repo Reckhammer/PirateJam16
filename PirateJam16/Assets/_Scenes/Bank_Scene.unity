@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 1
-  unlockedRotation: {x: 0, y: 90, z: 0}
+  unlockedRotation: {x: 0, y: 80, z: 0}
   lerpSpeed: 0.1
   openObject: {fileID: 1225573338}
 --- !u!135 &1100118761
