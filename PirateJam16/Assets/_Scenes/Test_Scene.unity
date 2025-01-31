@@ -241,14 +241,6 @@ PrefabInstance:
       propertyPath: uiHealthBar
       value: 
       objectReference: {fileID: 450044614}
-    - target: {fileID: 7942219221667373158, guid: 95fb8f7d61a295e4e99ba61b03541f31, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7942219221667373158, guid: 95fb8f7d61a295e4e99ba61b03541f31, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
